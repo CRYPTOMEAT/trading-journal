@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trading Journal</h1>
+    </header>
+    <main>
+        <form id="trade-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            
+            <label for="asset">Asset:</label>
+            <input type="text" id="asset" required>
+            
+            <label for="entry-price">Entry Price:</label>
+            <input type="number" id="entry-price" step="0.01" required>
+            
+            <label for="exit-price">Exit Price:</label>
+            <input type="number" id="exit-price" step="0.01" required>
+            
+            <label for="position-size">Position Size:</label>
+            <input type="number" id="position-size" step="0.01" required>
+            
+            <label for="strategy">Strategy:</label>
+            <input type="text" id="strategy">
+            
+            <label for="notes">Notes:</label>
+            <textarea id="notes"></textarea>
+            
+            <button type="submit">Add Trade</button>
+        </form>
+        <table id="trades-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Asset</th>
+                    <th>Entry Price</th>
+                    <th>Exit Price</th>
+                    <th>Position Size</th>
+                    <th>Strategy</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Trades will be added here -->
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
